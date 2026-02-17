@@ -586,3 +586,13 @@ ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
 🎉 CONGRATULATIONS ! 🎉
 
 [<< Day 4](../04_Day_Strings/04_strings.md) | [Day 6 >>](../06_Day_Tuples/06_tuples.md)
+
+ The underscore (_) in:
+is a convention in Python that means: “I need a loop counter to repeat something, but I’m not going to use that variable.”
+Why use _ here?
+
+range(3) produces 0, 1, 2, but you don’t actually use those values inside the loop—you just want to run the body three times.
+Writing for _ in range(3): signals to readers (and linters) that the loop variable is intentionally unused.
+
+for _ in range(3):
+    food_stuff_tp.pop(0)
